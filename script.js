@@ -24,3 +24,27 @@ var ee = ["Ishita Pandey", "Rishit Mehrotra", "NOTA"];
 function randomize(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
+
+// define a function to call the randomize function and display the result
+function display() {
+    document.getElementById("president").innerHTML = randomize(president);
+    document.getElementById("cult").innerHTML = randomize(cult);
+    document.getElementById("sports").innerHTML = randomize(sports);
+    document.getElementById("snt").innerHTML = randomize(snt);
+    document.getElementById("mess").innerHTML = randomize(mess);
+    document.getElementById("coa").innerHTML = randomize(coa);
+    document.getElementById("hostel").innerHTML = randomize(hostel);
+    document.getElementById("acads_ug").innerHTML = randomize(acads_ug);
+    document.getElementById("acads_pg").innerHTML = randomize(acads_pg);
+    document.getElementById("sen_pg").innerHTML = randomize(sen_pg);
+    document.getElementById("sen_mems").innerHTML = randomize(sen_mems);
+    document.getElementById("sen_me").innerHTML = randomize(sen_me);
+    document.getElementById("sen_ce").innerHTML = randomize(sen_ce);
+    document.getElementById("sen_cse").innerHTML = randomize(sen_cse);
+    document.getElementById("sen_ee").innerHTML = randomize(sen_ee);
+    document.getElementById("mems").innerHTML = randomize(mems);
+    document.getElementById("me").innerHTML = randomize(me);
+    document.getElementById("ce").innerHTML = randomize(ce);
+    document.getElementById("cse").innerHTML = randomize(cse);
+    document.getElementById("ee").innerHTML = randomize(ee);
+}

@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f77f15;
+}
+
+.main-container {
+    width: clamp(300px, 90%, 900px);
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+.result {
+    /* width: 100%; */
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f77f1525;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cust-row {
+    align-items: center;
+    margin-top: 15px;
+}

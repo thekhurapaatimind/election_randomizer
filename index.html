@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Randomizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container text-center">
+        <h2>Hello, Lets Start</h2>
+        <!-- Button to call the function display from script.css -->
+        <button class="btn btn-success" onclick="display()">Randomize
+            <i class="fas fa-random mb-0 ms-1"></i>
+        </button>
+        <div>
+            <h3>Generated Random Votes</h3>
+            <div class="row cust-row">
+                <div class="post col-5">President, Student Gymkhana</div>
+                <div class="result col-7 text-center">
+                    <span id="president"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Culturals</div>
+                <div class="result col-7 text-center">
+                    <span id="cult"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Sports</div>
+                <div class="result col-7 text-center">
+                    <span id="sports"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Science and Technology</div>
+                <div class="result col-7 text-center">
+                    <span id="snt"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Mess, Catering and Allied Services (MAC).</div>
+                <div class="result col-7 text-center">
+                    <span id="mess"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Counselling, Alumni and Outreach (COA).</div>
+                <div class="result col-7 text-center">
+                    <span id="coa"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Hostel</div>
+                <div class="result col-7 text-center">
+                    <span id="hostel"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Academics (UG)</div>
+                <div class="result col-7 text-center">
+                    <span id="acads_ug"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">General Secretary, Academics (PG)</div>
+                <div class="result col-7 text-center">
+                    <span id="acads_pg"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senator (PG)</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_pg"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senior Senator MEMS</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_mems"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senior Senator ME</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_me"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senior Senator CE</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_ce"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senior Senator CSE</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_cse"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Senior Senator EE</div>
+                <div class="result col-7 text-center">
+                    <span id="sen_ee"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Junior Senator MEMS</div>
+                <div class="result col-7 text-center">
+                    <span id="mems"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Junior Senator ME</div>
+                <div class="result col-7 text-center">
+                    <span id="me"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Junior Senator CE</div>
+                <div class="result col-7 text-center">
+                    <span id="ce"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Junior Senator CSE</div>
+                <div class="result col-7 text-center">
+                    <span id="cse"></span>
+                </div>
+            </div>
+            <div class="row cust-row">
+                <div class="post col-5">Junior Senator EE</div>
+                <div class="result col-7 text-center">
+                    <span id="ee"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d48aa7277c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
