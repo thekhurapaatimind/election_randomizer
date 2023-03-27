@@ -80,8 +80,10 @@ function disableButton() {
     if(x === "bt") {
         document.getElementById("sen_pg1").style.display = "none";
         document.getElementById("acads_pg1").style.display = "none";
-        document.getElementById("acad_ug1").style.display = "flex";
-        if(y === "1") {
+        document.getElementById("acads_ug1").style.display = "flex";
+        var yr = document.getElementById("year").value;
+        if(yr === "first") {
+            console.log("first");
             document.getElementById("mems1").style.display = "flex";
             document.getElementById("me1").style.display = "flex";
             document.getElementById("ce1").style.display = "flex";
@@ -93,7 +95,7 @@ function disableButton() {
             document.getElementById("sen_cse1").style.display = "none";
             document.getElementById("sen_ee1").style.display = "none";
         }
-        else if(y === "2") {
+        else {
             document.getElementById("mems1").style.display = "none";
             document.getElementById("me1").style.display = "none";
             document.getElementById("ce1").style.display = "none";
