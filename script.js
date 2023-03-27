@@ -47,4 +47,93 @@ function display() {
     document.getElementById("ce").innerHTML = randomize(ce);
     document.getElementById("cse").innerHTML = randomize(cse);
     document.getElementById("ee").innerHTML = randomize(ee);
+    document.getElementById("results").style.display = "block";
+}
+
+// add eventlistener to call the disableButton function each time the select value with id "course" or "year" is changed
+document.getElementById("rand-button").disabled = true;
+document.getElementById("results").style.display = "none";
+document.getElementById("year").disabled = true;
+document.getElementById("course").addEventListener("change", disableButton);
+document.getElementById("year").addEventListener("change", disableButton);
+
+// disable the button with id "rand-button" if the form with select id "course" is not at random value
+function disableButton() {
+    var x = document.getElementById("course").value;
+    var y = document.getElementById("year").value;
+
+    if(x === "bt") {
+        document.getElementById("year").disabled = false;
+    }
+    else {
+        document.getElementById("year").disabled = true;
+    }
+
+    if (x === "default" || (x === "bt" && y === "default")) {
+        document.getElementById("rand-button").disabled = true;
+        document.getElementById("results").style.display = "none";
+
+    } else {
+        document.getElementById("rand-button").disabled = false;
+    }
+
+    if(x === "bt") {
+        document.getElementById("sen_pg1").style.display = "none";
+        document.getElementById("acads_pg1").style.display = "none";
+        document.getElementById("acad_ug1").style.display = "flex";
+        if(y === "1") {
+            document.getElementById("mems1").style.display = "flex";
+            document.getElementById("me1").style.display = "flex";
+            document.getElementById("ce1").style.display = "flex";
+            document.getElementById("cse1").style.display = "flex";
+            document.getElementById("ee1").style.display = "flex";
+            document.getElementById("sen_mems1").style.display = "none";
+            document.getElementById("sen_me1").style.display = "none";
+            document.getElementById("sen_ce1").style.display = "none";
+            document.getElementById("sen_cse1").style.display = "none";
+            document.getElementById("sen_ee1").style.display = "none";
+        }
+        else if(y === "2") {
+            document.getElementById("mems1").style.display = "none";
+            document.getElementById("me1").style.display = "none";
+            document.getElementById("ce1").style.display = "none";
+            document.getElementById("cse1").style.display = "none";
+            document.getElementById("ee1").style.display = "none";
+            document.getElementById("sen_mems1").style.display = "flex";
+            document.getElementById("sen_me1").style.display = "flex";
+            document.getElementById("sen_ce1").style.display = "flex";
+            document.getElementById("sen_cse1").style.display = "flex";
+            document.getElementById("sen_ee1").style.display = "flex";
+        }
+    }
+    else {
+        document.getElementById("sen_pg1").style.display = "flex";
+        document.getElementById("acads_pg1").style.display = "flex";
+        document.getElementById("acads_ug1").style.display = "none";
+        document.getElementById("mems1").style.display = "none";
+        document.getElementById("me1").style.display = "none";
+        document.getElementById("ce1").style.display = "none";
+        document.getElementById("cse1").style.display = "none";
+        document.getElementById("ee1").style.display = "none";
+        document.getElementById("sen_mems1").style.display = "none";
+        document.getElementById("sen_me1").style.display = "none";
+        document.getElementById("sen_ce1").style.display = "none";
+        document.getElementById("sen_cse1").style.display = "none";
+        document.getElementById("sen_ee1").style.display = "none";
+    }
+
+}
+
+// add an event to show disclaimerModal when the page is loaded
+window.addEventListener("load", function() {
+    console.log("loaded");
+    displayModal();
+});
+
+// define a function to show disclaimerModal
+function displayModal() {
+    this.document.getElementById("disclaimerModal").style.display = "flex";
+}
+function closeModal() {
+    this.document.getElementById("disclaimerModal").style.display = "none";
 }
