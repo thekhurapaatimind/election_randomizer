@@ -18,6 +18,10 @@
     <div class="main-container text-center">
         <h2 class="my-4">Vote-o-Matic</h2>
 
+        <p class="text-muted my-4 w-75 fst-italic mx-auto">Get ready to roll the dice and choose your price... err, I
+            mean candidate! Our election randomizer will help you pick the next leader of the free pizza... I mean,
+            world!</p>
+
         <p class="lead fst-italic text-muted">Select to Proceed</p>
 
         <!-- Form with two select inputs: Course and Year -->
@@ -35,15 +39,15 @@
         </form>
 
         <!-- Button to call the function display from script.css, disable the button if the form values are not selected-->
-        <button class="btn btn-success my-2" onclick="display()" id="rand-button">Randomize
+        <button class="btn btn-success my-2" onclick="displayDice()" id="rand-button">Randomize
             <i class="fas fa-random mb-0 ms-1"></i>
         </button>
 
-        <p class="text-muted my-4 w-75 fst-italic mx-auto">Get ready to roll the dice and choose your price... err, I
-            mean candidate! Our election randomizer will help you pick the next leader of the free pizza... I mean,
-            world!</p>
+        <div class="dice my-3" id="dice">
+            <img src="./dice.gif" alt="dice" class="img-fluid" width="200px">
+        </div>
         <div id="results">
-            <h5 class="text-uppercase my-4">Generated Random Votes</h5>
+            <h5 class="text-uppercase my-5">Generated Random Votes</h5>
             <div class="row cust-row">
                 <div class="post col-5">President, Student Gymkhana</div>
                 <div class="result col-7 text-center">

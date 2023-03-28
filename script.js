@@ -24,6 +24,13 @@ var ee = ["Ishita Pandey", "Rishit Mehrotra", "NOTA"];
 function randomize(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
+// define an async function to display the dice animation first and then call the display function after 1 second delay
+async function displayDice() {
+    document.getElementById("dice").style.display = "block";
+    document.getElementById("results").style.display = "none";
+    await new Promise(r => setTimeout(r, 800));
+    display();
+}
 
 // define a function to call the randomize function and display the result
 function display() {
@@ -48,11 +55,13 @@ function display() {
     document.getElementById("cse").innerHTML = randomize(cse);
     document.getElementById("ee").innerHTML = randomize(ee);
     document.getElementById("results").style.display = "block";
+    document.getElementById("dice").style.display = "none";
 }
 
 // add eventlistener to call the disableButton function each time the select value with id "course" or "year" is changed
 document.getElementById("rand-button").disabled = true;
 document.getElementById("results").style.display = "none";
+document.getElementById("dice").style.display = "none";
 document.getElementById("year").disabled = true;
 document.getElementById("course").addEventListener("change", disableButton);
 document.getElementById("year").addEventListener("change", disableButton);
